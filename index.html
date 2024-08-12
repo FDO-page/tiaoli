@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDO-startingpage</title>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+            --text-color: #333;
+            --bg-color: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-color: #f0f0f0;
+                --bg-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: var(--text-color);
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-gradient);
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 800px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            background: var(--bg-color);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                justify-content: flex-start;
+                padding-left: calc((100% - 65%) * 0.382);
+            }
+            .content-wrapper {
+                width: 65%;
+            }
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dashed currentColor;
+        }
+
+        a:hover {
+            border-bottom-style: solid;
+        }
+
+        .content-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content-wrapper::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .content-wrapper::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        .content-wrapper::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .close-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s ease;
+            z-index: 1000;
+        }
+
+        .close-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .close-button::before,
+        .close-button::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: var(--text-color);
+            transform: rotate(45deg);
+        }
+
+        .close-button::after {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <button class="close-button" onclick="closeWebsite()"></button>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="content">
+                <h1>自由与多元化促进会条例（试行稿）</h1>
+                <p></p>
+                <p>\n第一章-总则\n\n第一条：自由与多元化促进会（以下简称“我会”）是一个多元化、去中心化的组织，我会的宗旨在于促进网络的自由与多元化，避免同质化、极权化的网络环境，为少数群体、持不同政见者提供发声的平台。为明确我会的权利组成，规范我会成员的权力行使，制定自由与多元化促进会条例（以下简称本条例）。\n\n第二条：我会实行全员所有制，由所有成员共同组成和拥有，而非任何一个成员。我会去中心化的为每个成员提供平台和支持，以确保多元性与开放性。任何一个成员不得通过任何手段阻止另一符合规范的成员表达观点。\n\n第三条：我会为以去中心化为主的组织，目前通过网络站点提供的网络页面代表我会。我会成员的交流通过加密的去中心化软件。我会任何成员都不能以任何理由要求我会其他成员透露其个人信息，但有权要求其虚拟身份。当虚拟身份可能与现实身份产生关联时，虚拟身份拥有者可拒绝提供其虚拟身份。\n\n第二章-基础权力\n\n第四条：我会内部对部分事务的决定实行少数服从多数的民主制度。下文具体事项应写明是否使用民主制度。当新增民主权利时，应以是否限制个人表达为考虑依据。若未具体说明，即不适用。不适用的情况，应有相应的非变相个人决定的其他手段进行代替。\n\n第五条：在非民主体系的运作时以去中心化为重点，即通过多个子项目并行代替一个项目对其他项目的替代。去中心化是我会的一项基本权利基础。我会鼓励将项目去中心化，建立良好的去中心化环境。民主投票无权剥夺任何符合本规定的自然人建立去中心化的文章页面的权利。\n\n第六条：去中心化的主网页指每个自然人创建的用于显示相应文章列表和链接的网站。去中心化的网站个体可依照本规定创建主网页，可选择不与其他主网页导向的文章一致。去中心化个体的主网页应在明显位置有便捷的引导跳转与其他去中心化个体主网站联通。所有主网站的删除应由民主程序进行决定，并在便于去中心化主网站拥有者查看、使用的平台公布。\n\n第七条：我会的用于内部事务的民主制度为精英民主制，即在管理层内部进行民主投票。投票的平台和全过程应确保匿名性。投票的结果应在便于去中心化主网站拥有者查看、使用的平台由至少两个管理层内部人员公布，并一并公布可信的证据证明投票的过程和结果的真实性。\n\n第八条：本条例实施后，更改本条例应由民主制度在管理层内部决策。如有必要任意管理层成员可通过发布文章等手段提出自己的诉求或回应他人的诉求。本条例一、二章的更改只能新增与原一二章条例不违背的条例，或是对原本对时间相应描述进行修改（如此表述：现阶段……）。其他章节删改新增应符合第一二章的要求。\n\n第九条：管理层由管理委员会会员和会长组成。管理委员会会员应由本条例生效前自愿加入本组织的会员和被推荐后经民主投票程序后新增的议员组成，会员可以自愿退出。在本条例生效后的下一任会长应由管理层内选举产生，每位会员投票时拥有5分总分，将可以有小数的分数分配到至少两个候选人。得分最高者获得下一任期，每一届任期为期四月。任何一个自然人不能重复三次及以上当选会长。\n\n第十条：会长依照本规定履行其权利及义务。如在任期内委员会超过70%成员认为应更换会长人选，可在通知后两天后强制更换。会长应贯彻落实本条例自由、多元的精神，承担以下事务：组织和领导会员进行本条例所规定应由民主进程决定的事务。建立其个人去中心化网页。\n\n第十一条：我会管理委员会成员应拥有并在必要时根据本条例第三条向其他成员分享其唯一不变的虚拟身份，此身份不能与现实中任何个人信息对应。虚拟身份应由一串字符组成，不包含任何明文和加密内容。\n\n第十二条：我会管理成员在证明其身份时应使用虚拟身份。虚拟身份应在加入我会前自行创建，在提交申请时使用。不能与其他已加入我会成员的虚拟身份重合。我会管理委员会成员和会长可在我会网站公开公布自己的虚拟身份，我会应收集所有管理委员会及会长虚拟身份并在便于去中心化主网站拥有者查看、使用的平台公布。\n\n第十三条：本条例最终解释权归管理委员会所有。任何自然人的去中心化网页可以选择保留著作权。\n\n第三章-运作方式\n\n第十四条：我会现阶段使用网页进行内容的传播。根据本条例第六条，任何自然人都可以创立自己的去中心化主网页，并向我会会员申请。我会不赞扬将个人去中心化主页独立出本组织的行动。去中心化网页和主页不得含有或可跳转到诱导、黄色或暴力性内容。可能敏感或造成不适的内容应在显示或跳转前明确标识。\n\n第十五条：我会鼓励任何自然人建立去中心化网页所跳转的文章界面，创作自己的内容。但任何网页不能以营利为目的，不得跳转或展示包含引导购买任何商品的页面。允许含有向管理委员会捐赠或文章作者捐款的链接或内容。\n\n第十六条：我会会长的个人去中心化网页和主页不得跳转或展示包含引导购买任何商品的页面。我会认可的新增可使用我会名义的网站主页根据本规定第十三、十四、和十九条进行审核，至少由两人管理层通过虚拟身份与新增结果绑定后可通过。个人去中心化主页依照本条例第六条删除。\n\n第十七条：我会管理委员会现阶段使用加密软件session进行交流，管理委员会成员应都使用此软件进行交流、投票。在此软件内用户名应为本人的虚拟身份。应安全原因，不鼓励使用其他软件交流。\n\n第十八条：剥夺我会管理委员会会员的会员权应根据本条例第七条进行。而对于会员权的剥夺仅限以明确的虚拟身份。其本人可使用新的虚拟身份向我会委员会提出加入申请。如不更换虚拟身份，也可重新提出申请。对一个虚拟身份可以永久剥夺其会员权。\n\n第十九条：保护个人的隐私和信息安全是每个人的责任和义务，我会不对非管理委员会的任何自然人做出相应要求。任何去中心化网页和主页拥有者都不能公布任何选择以虚拟身份在网络活动的自然人的与其现实生活等隐私信息有关的内容。违反此条的网页应不被任何去中心化主页链接。\n\n第二十条：我会会长的去中心化网站主页必须拥有明显的引导指向本条例完整版页面的链接或信息。其他去中心化主页拥有者可选择是否显示本条例链接。我会会长的去中心化主页应在明显处包含我会名称全称和我会的标志（太阳标识：𖤓）。\n</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function processLinks() {
+            const content = document.querySelector('.content');
+            content.innerHTML = content.innerHTML.replace(/\[link:(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
+        }
+
+        function processLineBreaks() {
+            const content = document.querySelector('.content');
+            content.innerHTML = content.innerHTML.replace(/\\n/g, '<br>');
+        }
+
+        function closeWebsite() {
+            window.close();
+            // 如果window.close()不起作用（在某些浏览器中可能会被阻止），可以考虑使用以下替代方案：
+            // document.body.innerHTML = '<h1>感谢您的访问，页面已关闭。</h1>';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            processLinks();
+            processLineBreaks();
+        });
+    </script>
+</body>
+</html>
